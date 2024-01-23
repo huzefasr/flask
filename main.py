@@ -79,7 +79,7 @@ def order_list():
     
     response = requests.request("POST", url, headers=header, data=payload)
     new_response = json.loads(response.text)
-    print(new_response)
+    print(type(new_response))
     if response.ok:
         return new_response
     else:
