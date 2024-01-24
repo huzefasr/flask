@@ -78,9 +78,9 @@ def order_list():
     payload = json.dumps(request.get_json())
     
     response = requests.request("POST", url, headers=header, data=payload)
-    print("dump")
     new_response = json.loads(response.text)
     print(type(new_response))
+    print(new_response)
     if response.ok:
         return new_response
     else:
